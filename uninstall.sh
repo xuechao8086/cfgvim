@@ -1,5 +1,5 @@
 #!/bin/sh
 cd ~
-[ -d ~/vim  ] && mv -rf ~/vim ~/vim.$$
-[ -d ~/.vim ] && mv -rf ~/.vim ~/.vim.$$
-[ -d ~/.vimrc ] && mv -rf ~/.vimrc ~/.vimrc_$$
+[ -d ~/vim  ] && rm -rf ~/vim 
+[ -d ~/.vim ] && rm -rf ~/.vim$
+[ -d ~/.vimrc ] && rm -rf ~/.vimrc
