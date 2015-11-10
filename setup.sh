@@ -1,6 +1,6 @@
 #!/bin/bash
 TMPFILE="./charlie.dat"
-GITSOURCE="https://github.com/ma6174/vim.git"
+GITSOURCE="https://github.com/xuechao8086/cfgvim.git"
 VUNDLE="https://github.com/gmarik/vundle.git"
 
 echo "安装将花费一定时间，请耐心等待直到安装完成^_^"
@@ -21,7 +21,7 @@ fi
 sudo easy_install -ZU autopep8 
 if [ -e /usr/bin/ctags ] 
 then
-    if [ !-l /usr/local/bin/ctags ]
+    if [ ! -e /usr/local/bin/ctags ]
     then 
         sudo ln -s /usr/bin/ctags /usr/local/bin/ctags
     fi
