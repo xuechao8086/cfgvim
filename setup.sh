@@ -1,5 +1,5 @@
 #!/bin/bash
-TMPFILE="./charlie.dat"
+TMPFILE="./charlie.dat.$$"
 GITSOURCE="https://github.com/xuechao8086/cfgvim.git"
 VUNDLE="https://github.com/gmarik/vundle.git"
 
