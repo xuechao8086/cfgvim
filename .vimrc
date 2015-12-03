@@ -69,7 +69,7 @@ set expandtab
 " 在行和段开始处使用制表符
 set smarttab
 " 显示行号
-set number
+"set number
 " 历史记录数
 set history=1000
 "搜索逐字符高亮
@@ -113,7 +113,7 @@ nmap tt :%s/\t/    /g<CR>
 
 function AddTitlePython()
     call setline(1, "#!/usr/bin/env python2.7")
-    call append(1, "#coding=utf8")
+    call append(1, "#coding=utf-8")
     call append(2,"")
     call append(3, '"""')
     call append(4,"Author:         charliezhao")
@@ -429,8 +429,8 @@ let g:miniBufExplModSelTarget = 1
 
 set iskeyword+=.
 set termencoding=utf-8
-set encoding=utf8
-set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
+set encoding=utf-8
+set fileencodings=utf-8,ucs-bom,gbk,cp936,gb2312,gb18030
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
