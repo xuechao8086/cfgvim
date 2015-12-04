@@ -178,7 +178,7 @@ func SetTitle()
 		call append(line("."), "	> File Name:    ".expand("%")) 
 		call append(line(".")+1, "	> Author:       charliezhao") 
 		call append(line(".")+2, "	> Mail:         xuechao8086@126.com") 
-		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
+        call append(line(".")+3, "	> Created Time: ".strftime("%Y-%m-%d %H:%M")) 
 		call append(line(".")+4, " ************************************************************************/") 
 		call append(line(".")+5, "")
 	endif
