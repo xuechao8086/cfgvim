@@ -112,23 +112,37 @@ nmap tt :%s/\t/    /g<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function AddTitlePython()
+    :let lnum=1
     call setline(1, "#!/usr/bin/env python2.7")
-    call append(1, "#coding=utf-8")
-    call append(2,"")
-    call append(3, '"""')
-    call append(4,"Author:         charliezhao")
-    call append(5,"Filename:       " . expand("%"))
-    call append(6,"Create Time:  ".strftime("%Y-%m-%d %H:%M"))
-    call append(7,"Description:")
-    call append(8,"                ")
-    call append(9, '"""')
-    call append(10, '')
+    call append(lnum, "#coding=utf-8")
+    :let lnum=lnum+1
+    call append(lnum,"")
+    :let lnum=lnum+1
+    call append(lnum, '"""')
+    :let lnum=lnum+1
+    call append(lnum,"Author:         charliezhao")
+    :let lnum=lnum+1
+    call append(lnum,"EMail:          xuechao8086@126.com")
+    :let lnum=lnum+1
+    call append(lnum,"Filename:       " . expand("%"))
+    :let lnum=lnum+1
+    call append(lnum,"Create Time:  ".strftime("%Y-%m-%d %H:%M"))
+    :let lnum=lnum+1
+    call append(lnum,"Description:")
+    :let lnum=lnum+1
+    call append(lnum,"                ")
+    :let lnum=lnum+1
+    call append(lnum, '"""')
+    :let lnum=lnum+1
+    call append(lnum, '')
 endfunc
 
 function AddTitleBash()
     :let lnum=1
     call setline(1, "#!/bin/sh") 
     call append(lnum, '#Author:         charliezhao')
+    :let lnum=lnum+1
+    call append(lnum, '#EMail:          xuechao8086@126.com')
     :let lnum=lnum+1
     call append(lnum, '#Filename:       ' . expand("%"))
     :let lnum=lnum+1
@@ -162,8 +176,8 @@ func SetTitle()
 	else 
 		call setline(1, "/*************************************************************************") 
 		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: ") 
-		call append(line(".")+2, "	> Mail: ") 
+		call append(line(".")+1, "	> Author: charliezhao") 
+		call append(line(".")+2, "	> Mail: xuechao8086@126.com") 
 		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
 		call append(line(".")+4, " ************************************************************************/") 
 		call append(line(".")+5, "")
