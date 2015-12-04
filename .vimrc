@@ -126,7 +126,7 @@ function AddTitlePython()
     :let lnum=lnum+1
     call append(lnum,"Filename:       " . expand("%"))
     :let lnum=lnum+1
-    call append(lnum,"Create Time:  ".strftime("%Y-%m-%d %H:%M"))
+    call append(lnum,"Create Time:    ".strftime("%Y-%m-%d %H:%M"))
     :let lnum=lnum+1
     call append(lnum,"Description:")
     :let lnum=lnum+1
@@ -175,9 +175,9 @@ func SetTitle()
 "        call setline(1,"<head><meta charset=\"UTF-8\"></head>")
 	else 
 		call setline(1, "/*************************************************************************") 
-		call append(line("."), "	> File Name: ".expand("%")) 
-		call append(line(".")+1, "	> Author: charliezhao") 
-		call append(line(".")+2, "	> Mail: xuechao8086@126.com") 
+		call append(line("."), "	> File Name:    ".expand("%")) 
+		call append(line(".")+1, "	> Author:       charliezhao") 
+		call append(line(".")+2, "	> Mail:         xuechao8086@126.com") 
 		call append(line(".")+3, "	> Created Time: ".strftime("%c")) 
 		call append(line(".")+4, " ************************************************************************/") 
 		call append(line(".")+5, "")
